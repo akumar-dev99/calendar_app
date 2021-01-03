@@ -1,90 +1,121 @@
 .calendar {
-    box-sizing: border-box;
-    font-size: 1rem;
-    max-width: 400px;
-  }
-  
-  .calendar .header {
-    background-color: light-blue;
-    text-align: center;
-    min-height: 2rem;
-    line-height: 2rem;
-    color: var(--black);
-    font-family: font-book;
-    font-weight: 700;
-    display: flex;
-  }
-  
-  .calendar .day-names {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
-    align-items: center;
-  }
-  
-  .calendar .body {
-    border: 1px solid lightblue;
-  }
-  
-  .calendar .header .previous {
-    flex: 1;
-    text-align: left;
-    margin-left: 1rem;
-  }
-  
-  .calendar .header .next {
-    flex: 1;
-    text-align: right;
-    margin-right: 1rem;
-  }
-  
-  .calendar .week {
-    background-color: white;
-    width: calc(100% / 7);
-    height: 44px;
-    line-height: 44px;
-    text-align: center;
-    text-transform: uppercase;
-    color: black;
-    font-weight: 400;
-  }
-  .calendar .week div {
-    width: 100%;
-  }
-  
-  .calendar .day {
-    position: relative;
-    width: calc(100% / 7);
-    height: 44px;
-    display: inline-block;
-    background-color: white;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    z-index: 1;
-    text-align: center;
-  }
-  
-  .calendar .day div {
-    width: 54px;
-    height: 44px;
-    position: relative;
-    color: black;
-    z-index: 100;
-    line-height: 44px;
-  }
-  
-  .calendar .day div.before {
-    color: grey;
-  }
-  
-  .calendar .day div.selected {
-    background-color: red;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .calendar .day div.today {
-    background-color: grey;
-  }
+  font-size: 1rem;
+  width: 70%;
+}
+
+.calendar .day-names {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.calendar .body {
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.calendar .week {
+  background-color: white;
+  width: calc(100% / 7);
+  height: 50px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 400;
+  padding-left: 30px;
+}
+.calendar .week div {
+  width: 100%;
+}
+
+.calendar .day {
+  width: calc(100% / 7);
+  height: 150px;
+  display: inline-block;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  text-align:end;
+  justify-content: flex-end;
+  border: 0.1px solid gray;
+  padding-right: 10px;
+}
+
+
+.calendar .weekday {
+  width: calc(100% / 7);
+  height: 150px;
+  display: inline-block;
+  background-color: grey;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  text-align:end;
+  justify-content: flex-end;
+  background-color: #fbfcfc;
+  border: 0.1px solid gray;
+  padding-right: 10px;
+}
+
+.calendar .day div {
+  width: calc(100% / 7);
+  height: 150px;
+  display: inline-block;
+  color: black;
+  z-index: 100;
+}
+
+.calendar .day div.before {
+  color: grey;
+}
+
+.calendar .day div.selected {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.calendar .day div.today {
+  background-color:  maroon;
+  color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.postOutline {
+  height: 45vh;
+  width: 14%;
+  margin-bottom: 2vh;
+  margin-top: 20px;
+  overflow: hidden;
+  border: 0.5px thin gray;
+  box-shadow: 1px 1px gray;
+}
+
+.postInfo {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag {
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.postDisplay{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
